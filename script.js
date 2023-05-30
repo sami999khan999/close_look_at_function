@@ -1,12 +1,26 @@
 "use strict";
 
+// default parameter -
+
+// reference -
+
+// function accepting callback junction -
+
+// currying function -
+
+// lambda expression -
+
+// call method, apply method and bind method -
+
+// Immediately Invoked Function Expression (IIFE) -
+
 //============================================================================================================================================//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //============================================================================================================================================//
 
 // // default parameter
 
-// // Default parameters in JavaScript allow you to specify default values for function parameters. If an argument is not provided when calling the function or is explicitly set to undefined, the default value will be used instead.
+// // Default parameters in JavaScript allow you to specify default values for function parameters. If an argument is not provided when calling the function or is explicitly set to undefined, the default value will be used instead. //
 
 //============================================================================================================================================//
 
@@ -39,7 +53,7 @@
 
 // // In JavaScript, variables can hold two types of values: primitive values and reference values. Understanding the difference between value and reference is crucial for working with JavaScript variables effectively. Reference types include objects, arrays, and functions.
 
-// // Refrence type - When you assign a reference type to a variable, the variable holds a reference (memory address) to the actual object stored in memory. When you assign a reference type variable to another variable or pass it as a function argument, the reference is copied, not the actual object. Modifying the object through one variable will affect the other variables since they point to the same object in memory. //
+// // Reference type - When you assign a reference type to a variable, the variable holds a reference (memory address) to the actual object stored in memory. When you assign a reference type variable to another variable or pass it as a function argument, the reference is copied, not the actual object. Modifying the object through one variable will affect the other variables since they point to the same object in memory. //
 
 // // Volue type - Value types include numbers, strings, booleans, null, and undefined. When you assign a value type to a variable, the variable holds the actual value. When you assign a value type variable to another variable or pass it as a function argument, a copy of the value is created. Modifying one variable does not affect the other since they hold independent copies of the value. //
 
@@ -75,13 +89,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //============================================================================================================================================//
 
-// // function accepting callback junction
+// // function accepting callback Function
 
 // // In JavaScript, functions can accept other functions as arguments, which are commonly referred to as callback functions. This pattern is known as "higher-order functions" and is widely used in JavaScript for various purposes, such as asynchronous operations, event handling, and functional programming. //
 
 //============================================================================================================================================//
-
-// // first class function
 
 // // first class function - In JavaScript, every function is considered a first-class function. In a programming language, if functions are treated as first-class citizens, it means that functions can be assigned to variables, passed as arguments to other functions, and returned as values from functions. In a language with first-class functions, functions are considered to have the same rights and abilities as other data types, such as numbers or strings. JavaScript is an example of a programming language that treats functions as first-class citizens. //
 
@@ -128,7 +140,7 @@
 // };
 
 // const logCounter = function (log) {
-//// logCounter is call back function //
+// // logCounter is call back function //
 //   return log.length;
 // };
 
@@ -225,7 +237,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //============================================================================================================================================//
 
-// // call method and apply method
+// // call method, apply method and bind method
 
 // // call - The call() method in JavaScript is used to invoke a function with a specified this value and arguments provided individually. It allows you to explicitly set the context (this value) for a function when invoking it. //
 
@@ -353,7 +365,7 @@
 
 // // Immediately Invoked Function Expression (IIFE)
 
-// // IIFE stands for Immediately Invoked Function Expression. It is a JavaScript function that is executed immediately after it is defined. IIFE is typically used to create a private scope for variables and functions, preventing them from polluting the global scope.
+// // IIFE stands for Immediately Invoked Function Expression. It is a JavaScript function that is executed immediately after it is defined. IIFE is typically used to create a private scope for variables and functions, preventing them from polluting the global scope. //
 
 //============================================================================================================================================//
 
