@@ -168,12 +168,14 @@
 // console.log(mathKlk(sub, 2, 5));
 
 //============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
 
 // // currying function
 
 // // Currying is a technique in functional programming where a function with multiple arguments is transformed into a sequence of functions, each taking a single argument. The curried function returns a new function with each argument partially applied until all the arguments are provided, at which point the final result is returned. //
 
-//--------------------------------------------------------------------------------------------------------------------------------------------//
+//============================================================================================================================================//
 
 // const greatings = function (great) {
 //   return function (name) {
@@ -201,12 +203,14 @@
 // console.log(klk(3)(2)(5)(3));
 
 //============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
 
 // // lambda expression
 
 // // A lambda expression, also known as an anonymous function or a function literal, is a concise way to define a function in programming languages that support functional programming paradigms. //
 
-//--------------------------------------------------------------------------------------------------------------------------------------------//
+//============================================================================================================================================//
 
 // const numSum = (a,b) => a+b
 // console.log(numSum(2,5))
@@ -216,3 +220,147 @@
 // const numMul = (a) => (b) => (c) => (d) => a * b * c * d;
 
 // console.log(numMul(2)(3)(3)(6));
+
+//============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
+
+// // call method and apply method
+
+// // call - The call() method in JavaScript is used to invoke a function with a specified this value and arguments provided individually. It allows you to explicitly set the context (this value) for a function when invoking it. //
+
+// // apply - The apply() method in JavaScript is similar to the call() method, but it accepts arguments as an array instead of individual parameters. It allows you to invoke a function and set the this value, along with passing an array (or array-like object) as the arguments to the function. //
+
+// // bind - The bind() method in JavaScript is used to create a new function that has a specific this value set, along with any specified arguments. When you use the bind() method on a function, it returns a new function with the same function body but a different this value. The original function is not invoked immediately but can be called later with the new this value. //
+
+//============================================================================================================================================//
+
+// const person = {
+//   fullName: function () {
+//     this.name = this.firstName + " " + this.lastName;
+//     return this.firstName + " " + this.lastName;
+//   },
+// };
+
+// const person1 = {
+//   name: "",
+//   firstName: "Jon",
+//   lastName: "Wick",
+// };
+
+// const person2 = {
+//   name: "",
+//   firstName: "Jonathon",
+//   lastName: "Wick",
+// };
+
+// const person3 = {
+//   name: "",
+//   firstName: "Baba",
+//   lastName: "Yaga",
+// };
+
+// console.log(person.fullName.call(person1));
+// console.log(person1.name);
+
+// console.log(person.fullName.apply(person2));
+
+// const pers3 = person.fullName.bind(person3)
+// console.log(pers3())
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const taxClk = function (taxRate, discount) {
+//   return `The total prce of ${this.product} is ${
+//     this.price + (this.price * taxRate) / 100 + discount
+//   }`;
+// };
+
+// // we can't call arrow function using call method because arrow function dasn't have there own value. //
+
+// const shop = {
+//   product: "Iphon 14 Pro Max",
+//   price: 1400,
+// };
+
+// console.log(taxClk.call(shop, 10, 50));
+
+// const taxAndDiscound = [15, 100];
+// console.log(taxClk.apply(shop, taxAndDiscound));
+
+// const taxFn = taxClk.bind(shop);
+// console.log(taxFn(20, 200));
+
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+
+// const airline1 = {
+//   airline: "Airline 001",
+//   code: "AGD",
+//   bookings: [],
+//   book: function (flighrNum, name) {
+//     const capName = name.at(0).toUpperCase() + name.slice(1);
+//     console.log(
+//       `${capName} booked a seat on ${this.airline}. Flight ${this.code}-${flighrNum}.`
+//     );
+//     this.bookings.push({
+//       passengerName: capName,
+//       flight: this.code + flighrNum,
+//     });
+//   },
+// };
+
+// const airline2 = {
+//   airline: "Airlene 002",
+//   code: "HRO",
+//   bookings: [],
+// };
+
+// const airline3 = {
+//   airline: "Airlene 003",
+//   code: "KFH",
+//   bookings: [],
+// };
+
+// const airline4 = {
+//   airline4: "Airline 004",
+//   code: "SER",
+//   bookings: [],
+// };
+
+// airline1.book(233, "sami");
+// airline1.book(173, "wick");
+// console.log(airline1.bookings);
+
+// airline1.book.call(airline2, 381, "luffy");
+// console.log(airline2.bookings);
+
+// const info = [463, "zoro"];
+// airline1.book.apply(airline3, info);
+// console.log(airline3.bookings);
+
+// const air4 = airline1.book.bind(airline4);
+// air4(273, "nami");
+// console.log(airline4.bookings);
+
+// const air1 = airline1.book.bind(airline1);
+// air1(473, "sanji");
+// console.log(airline1.bookings);
+// // bind method can bid it's own parent object. //
+
+//============================================================================================================================================//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//============================================================================================================================================//
+
+// // Immediately Invoked Function Expression (IIFE)
+
+// // IIFE stands for Immediately Invoked Function Expression. It is a JavaScript function that is executed immediately after it is defined. IIFE is typically used to create a private scope for variables and functions, preventing them from polluting the global scope.
+
+//============================================================================================================================================//
+
+// (function () {
+//   console.log("This will inveked only once.");
+// })();
+
+//============================================================================================================================================//
+
+// ((a, b) => console.log(a * b))(2, 3);
